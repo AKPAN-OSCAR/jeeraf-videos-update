@@ -166,10 +166,25 @@
 
       .video-info {
         display: flex;
-        align-items: flex-start;
+        align-items: stretch;
         justify-content: space-between;
         gap: 24px;
         padding: 24px;
+      }
+
+      .video-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .video-number {
+        color: #929bb0;
+        font-size: 0.82rem;
+        font-weight: 700;
+        white-space: nowrap;
       }
 
       .video-info h3 {
@@ -246,6 +261,11 @@
           flex-direction: column;
           padding: 19px;
         }
+
+        .video-actions {
+          flex-direction: row;
+          align-items: center;
+        }
       }
     </style>
   </head>
@@ -277,6 +297,34 @@
           <span class="video-count">2 videos</span>
         </div>
 
+        <article class="video-card" id="video2">
+          <div class="player">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/Ph9I9sCMHO0"
+              title="JeeRaf CBT Software on Desktop — Version 1.0"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-info">
+            <div>
+              <h3>JeeRaf CBT Software on Desktop — Version 1.0</h3>
+              <p>
+                A quick walkthrough of what it’s like to use JeeRaf CBT software
+                on desktop.
+              </p>
+            </div>
+            <div class="video-actions">
+              <a class="watch-link" href="https://youtu.be/Ph9I9sCMHO0" target="_blank" rel="noopener noreferrer">
+                Watch on YouTube
+              </a>
+              <span class="video-number">Video 2</span>
+            </div>
+          </div>
+        </article>
+
         <article class="video-card" id="video1">
           <div class="player">
             <iframe
@@ -297,34 +345,12 @@
               </p>
               <span class="status">Current product build · In development</span>
             </div>
-            <a class="watch-link" href="https://youtu.be/9Rby3KtvQhk" target="_blank" rel="noopener noreferrer">
-              Watch on YouTube
-            </a>
-          </div>
-        </article>
-
-        <article class="video-card" id="video2">
-          <div class="player">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/Ph9I9sCMHO0"
-              title="JeeRaf CBT Software on Desktop — Version 1.0"
-              loading="lazy"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="video-info">
-            <div>
-              <h3>JeeRaf CBT Software on Desktop — Version 1.0</h3>
-              <p>
-                A quick walkthrough of what it’s like to use JeeRaf CBT software
-                on desktop.
-              </p>
+            <div class="video-actions">
+              <a class="watch-link" href="https://youtu.be/9Rby3KtvQhk" target="_blank" rel="noopener noreferrer">
+                Watch on YouTube
+              </a>
+              <span class="video-number">Video 1</span>
             </div>
-            <a class="watch-link" href="https://youtu.be/Ph9I9sCMHO0" target="_blank" rel="noopener noreferrer">
-              Watch on YouTube
-            </a>
           </div>
         </article>
       </main>
