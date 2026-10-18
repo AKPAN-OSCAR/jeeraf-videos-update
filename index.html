@@ -184,7 +184,20 @@
         color: #929bb0;
         font-size: 0.82rem;
         font-weight: 700;
+        text-decoration: none;
         white-space: nowrap;
+      }
+
+      .video-number:hover,
+      .video-number:focus-visible {
+        color: #c8d1ff;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .video-number:focus-visible {
+        outline: 2px solid #8796ff;
+        outline-offset: 4px;
       }
 
       .video-info h3 {
@@ -320,7 +333,7 @@
               <a class="watch-link" href="https://youtu.be/Ph9I9sCMHO0" target="_blank" rel="noopener noreferrer">
                 Watch on YouTube
               </a>
-              <span class="video-number">Video 2</span>
+              <a class="video-number" href="#video2">Video 2</a>
             </div>
           </div>
         </article>
@@ -349,7 +362,7 @@
               <a class="watch-link" href="https://youtu.be/9Rby3KtvQhk" target="_blank" rel="noopener noreferrer">
                 Watch on YouTube
               </a>
-              <span class="video-number">Video 1</span>
+              <a class="video-number" href="#video1">Video 1</a>
             </div>
           </div>
         </article>
