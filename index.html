@@ -115,12 +115,41 @@
         font-size: 0.9rem;
       }
 
+      .video-index {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
+
+      .video-index a {
+        padding: 9px 13px;
+        border: 1px solid rgb(255 255 255 / 16%);
+        border-radius: 999px;
+        color: #c8d1ff;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background 150ms ease, border-color 150ms ease;
+      }
+
+      .video-index a:hover,
+      .video-index a:focus-visible {
+        border-color: #8796ff;
+        background: rgb(135 150 255 / 14%);
+      }
+
       .video-card {
         overflow: hidden;
         border: 1px solid rgb(255 255 255 / 12%);
         border-radius: 20px;
         background: linear-gradient(145deg, rgb(255 255 255 / 7%), rgb(255 255 255 / 3%));
         box-shadow: 0 24px 80px rgb(0 0 0 / 28%);
+        scroll-margin-top: 24px;
+      }
+
+      .video-card + .video-card {
+        margin-top: 24px;
       }
 
       .player {
@@ -237,12 +266,18 @@
       </header>
 
       <main>
+        <!-- Keep these jump links in sync with the numbered video cards below. -->
+        <nav class="video-index" aria-label="Jump to a video">
+          <a href="#video1">Video 1</a>
+          <a href="#video2">Video 2</a>
+        </nav>
+
         <div class="section-heading">
-          <h2>Featured walkthrough</h2>
-          <span class="video-count">1 video</span>
+          <h2>Video library</h2>
+          <span class="video-count">2 videos</span>
         </div>
 
-        <article class="video-card">
+        <article class="video-card" id="video1">
           <div class="player">
             <iframe
               src="https://www.youtube-nocookie.com/embed/9Rby3KtvQhk"
@@ -263,6 +298,31 @@
               <span class="status">Current product build · In development</span>
             </div>
             <a class="watch-link" href="https://youtu.be/9Rby3KtvQhk" target="_blank" rel="noopener noreferrer">
+              Watch on YouTube
+            </a>
+          </div>
+        </article>
+
+        <article class="video-card" id="video2">
+          <div class="player">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/Ph9I9sCMHO0"
+              title="JeeRaf CBT Software on Desktop — Version 1.0"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="video-info">
+            <div>
+              <h3>JeeRaf CBT Software on Desktop — Version 1.0</h3>
+              <p>
+                A quick walkthrough of what it’s like to use JeeRaf CBT software
+                on desktop.
+              </p>
+            </div>
+            <a class="watch-link" href="https://youtu.be/Ph9I9sCMHO0" target="_blank" rel="noopener noreferrer">
               Watch on YouTube
             </a>
           </div>
