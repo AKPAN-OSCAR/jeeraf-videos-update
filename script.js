@@ -2,6 +2,26 @@ const dateCardTimeout = 2 * 60 * 1000;
 let activeDateCard = null;
 let dateCardTimer = null;
 
+const themeToggle = document.querySelector("[data-theme-toggle]");
+
+if (!(themeToggle instanceof HTMLButtonElement)) {
+  throw new Error("The theme toggle button is missing.");
+}
+
+function setTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  themeToggle.textContent = theme === "dark" ? "Light mode" : "Dark mode";
+  localStorage.setItem("jeeraf-theme", theme);
+}
+
+const savedTheme = localStorage.getItem("jeeraf-theme");
+setTheme(savedTheme === "light" ? "light" : "dark");
+
+themeToggle.addEventListener("click", () => {
+  const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  setTheme(nextTheme);
+});
+
 function closeDateCard(restoreFocus = false) {
   if (!activeDateCard) {
     return;
