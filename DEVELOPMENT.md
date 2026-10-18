@@ -11,6 +11,7 @@ filenames, and card content in sync whenever you add a video.
 - `style.css` contains the shared gallery and documentation-page styles, the
   dark/light theme palettes, and responsive rules.
 - `script.js` sets and saves the selected theme and handles the date popups.
+- `script.js` also controls the shared floating **Back to top** button.
 - `videoN.html` is the documentation page for Video N. The existing pages are
   `video1.html` and `video2.html`.
 
@@ -149,6 +150,9 @@ put the video-specific notes inside `<main class="doc-content">`:
         <!-- Add Video 3 documentation below this heading. -->
       </main>
     </div>
+    <button class="back-to-top" type="button" data-back-to-top hidden>
+      Back to top
+    </button>
   </body>
 </html>
 ```
@@ -213,6 +217,15 @@ Opening or closing a popup also updates the button's `aria-expanded` value.
 If adding a new interactive behavior, keep its setup in `script.js`, add
 accessible controls and state attributes in the HTML, and put presentation in
 `style.css`. Do not put script code inline in a page.
+
+### Back-to-top button
+
+Every page using `script.js` must include one button with
+`data-back-to-top`. It is hidden until the visitor scrolls at least 400 pixels,
+then appears fixed at the bottom-right. Clicking it scrolls to the top smoothly
+unless the visitor has enabled reduced motion in their operating-system
+settings. Use the shared `.back-to-top` styles rather than adding a page-specific
+version.
 
 ## Checklist before publishing
 

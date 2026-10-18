@@ -14,6 +14,7 @@ and sharing each video.
 - A separate documentation page for each video.
 - Dark and light themes, with the selected theme saved in the browser and used
   across the gallery and documentation pages.
+- A floating **Back to top** button on the gallery and documentation pages.
 - Responsive layout for desktop and mobile screens.
 
 ## Project files
